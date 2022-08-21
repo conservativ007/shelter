@@ -23,9 +23,9 @@ let pseudo = getPseudoRandomArray(numberOfArrays, amountOfElementsInArray, min, 
 setInterval(func1, 100);
 
 // сменить название функции
-function func1(){
+function func1() {
 
-	if(widthContainer != document.querySelector('.pets_content__cards-container').offsetWidth){
+	if (widthContainer != document.querySelector('.pets_content__cards-container').offsetWidth) {
 		console.log('смена разрешения!');
 		widthContainer = document.querySelector('.pets_content__cards-container').offsetWidth;
 		clearContainer();
@@ -40,18 +40,18 @@ function func1(){
 // ------------------------------------------------------------------------
 // смотрит ширину контейнера и указыает сколько должно быть подмассивов и по сколько элементов
 whatWidthPetsContent();
-function whatWidthPetsContent(){
+function whatWidthPetsContent() {
 
 	widthContainer = petsContentCardsContainer.offsetWidth;
 
-	if(widthContainer > 1199){
+	if (widthContainer > 1199) {
 		numberOfArrays = 6;
 		amountOfElementsInArray = 8;
 		pseudo = getPseudoRandomArray(numberOfArrays, amountOfElementsInArray, min, max);
 		vievPagination(i);
 	}
 
-	else if(widthContainer < 1200 && widthContainer > 579){
+	else if (widthContainer < 1200 && widthContainer > 579) {
 		numberOfArrays = 8;
 		amountOfElementsInArray = 6;
 
@@ -59,7 +59,7 @@ function whatWidthPetsContent(){
 		vievPagination(i);
 	}
 
-	else if(widthContainer < 579){
+	else if (widthContainer < 579) {
 		numberOfArrays = 16;
 		amountOfElementsInArray = 3;
 
@@ -72,7 +72,7 @@ function whatWidthPetsContent(){
 
 // создание элементов
 // создаём div
-function createDiv(elemClass){
+function createDiv(elemClass) {
 
 	let div = document.createElement('div');
 	div.classList.add(elemClass);
@@ -81,7 +81,7 @@ function createDiv(elemClass){
 }
 
 // создаём img
-function createImg(elemSrc){
+function createImg(elemSrc) {
 
 	let img = document.createElement('img');
 	img.src = elemSrc;
@@ -90,7 +90,7 @@ function createImg(elemSrc){
 }
 
 // создаём button
-function createButton(elemClass){
+function createButton(elemClass) {
 
 	let button = document.createElement('button');
 	button.classList.add(elemClass);
@@ -100,22 +100,24 @@ function createButton(elemClass){
 
 // --------------------------------------- //
 // очистка контейнера
-function clearContainer(){
+function clearContainer() {
 	petsContentCardsContainer.innerHTML = '';
 }
 
 
 // ---------------------------------------- //
 // создание карточек
-function vievPagination(i){
+function vievPagination(i) {
 	// сменить название функции
 	func2(pseudo[i]);
 }
 
 
-function func2(arr){
-	for(let i of arr){
 
+
+function func2(arr) {
+	for (let i of arr) {
+		// console.log(pets)
 		let cards = createDiv('cards');
 		cards.dataset.id = pets[i].id;
 
@@ -146,23 +148,23 @@ function func2(arr){
 
 // -------------------------------------------------------------------//
 // добаввление анимации
-function addAnimation(){
+function addAnimation() {
 	let cards = document.querySelectorAll('.cards');
 
 	toggleClass(cards);
-  setTimeout(toggleClass, 300, cards);
+	setTimeout(toggleClass, 300, cards);
 	console.log(cards);
 }
 
-function toggleClass(items){
-  items.forEach(i => i.classList.toggle('animate2'));
+function toggleClass(items) {
+	items.forEach(i => i.classList.toggle('animate2'));
 }
 
 
 // ------------------------------------------------------ //
 // генерируем кнопки пагинации
 createButtonPagination(numberOfArrays);
-function createButtonPagination(numberOfArrays){
+function createButtonPagination(numberOfArrays) {
 	let petsContentNavigation = document.querySelector('.pets_content__navigation');
 
 	navigationItemRewindPrev = createDiv('navigation-item__rewind-prev');
@@ -205,16 +207,16 @@ function createButtonPagination(numberOfArrays){
 // переход по кнопкам
 document.addEventListener('click', navigation);
 
-function navigation(e){
+function navigation(e) {
 	// console.log(e.target.dataset.nav);
-	if(e.target.dataset.nav == 'item__next') next();
-	if(e.target.dataset.nav == 'item__prev') prev();
-	if(e.target.dataset.nav == 'rewind-next') fullSpeedAhead();
-	if(e.target.dataset.nav == 'rewind-prev') fullBack();
+	if (e.target.dataset.nav == 'item__next') next();
+	if (e.target.dataset.nav == 'item__prev') prev();
+	if (e.target.dataset.nav == 'rewind-next') fullSpeedAhead();
+	if (e.target.dataset.nav == 'rewind-prev') fullBack();
 }
 
-function next(){
-	if(i + 1 == numberOfArrays) return;
+function next() {
+	if (i + 1 == numberOfArrays) return;
 	i++;
 	clearContainer();
 	vievPagination(i);
@@ -224,8 +226,8 @@ function next(){
 	addAnimation();
 }
 
-function prev(){
-	if(i == 0) return;
+function prev() {
+	if (i == 0) return;
 	i--;
 	clearContainer();
 	vievPagination(i);
@@ -235,8 +237,8 @@ function prev(){
 	addAnimation();
 }
 
-function fullSpeedAhead(){
-	if(i + 1 == numberOfArrays) return;
+function fullSpeedAhead() {
+	if (i + 1 == numberOfArrays) return;
 	i = numberOfArrays - 1;
 	clearContainer();
 	vievPagination(i);
@@ -246,8 +248,8 @@ function fullSpeedAhead(){
 	addAnimation();
 }
 
-function fullBack(){
-	if(i == 0) return;
+function fullBack() {
+	if (i == 0) return;
 	i = 0;
 	clearContainer();
 	vievPagination(i);
@@ -262,13 +264,13 @@ function fullBack(){
 // добавление класса active
 
 addClassActive();
-function addClassActive(){
-	if( i != numberOfArrays - 1){
+function addClassActive() {
+	if (i != numberOfArrays - 1) {
 		navigationItemRewindNext.classList.add('active');
 		navigationItemNext.classList.add('active');
 	}
 
-	if(i > 0){
+	if (i > 0) {
 		navigationItemRewindPrev.classList.add('active');
 		navigationItemPrev.classList.add('active');
 	}
@@ -278,13 +280,13 @@ function addClassActive(){
 // удаление класса active
 
 removeClassActive();
-function removeClassActive(){
-	if(i == numberOfArrays - 1){
+function removeClassActive() {
+	if (i == numberOfArrays - 1) {
 		navigationItemRewindNext.classList.remove('active');
 		navigationItemNext.classList.remove('active');
 	}
 
-	if(i == 0){
+	if (i == 0) {
 		navigationItemRewindPrev.classList.remove('active');
 		navigationItemPrev.classList.remove('active');
 	}

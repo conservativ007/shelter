@@ -1,12 +1,12 @@
 
-document.addEventListener('click', function(e){
-	if(e.target.dataset.randomPets != 'imgRandom') return;
+document.addEventListener('click', function (e) {
+	if (e.target.dataset.randomPets != 'imgRandom') return;
 	init();
 });
 
 
 init();
-function init(){
+function init() {
 	let contentCards = document.querySelector('.pets-content-cards');
 	let arrNumbersRandom = getRandomArray(1, 7);
 	let petRandom = getPetsRandom(arrNumbersRandom);
@@ -16,9 +16,8 @@ function init(){
 	addAnimation();
 }
 
-function createCards(petRandom, contentCards){
-
-	for(let i of petRandom){
+function createCards(petRandom, contentCards) {
+	for (let i of petRandom) {
 
 		let cards = document.createElement('div');
 		cards.classList.add('cards');
@@ -56,24 +55,23 @@ function createCards(petRandom, contentCards){
 	modal();
 }
 
-function getPetsRandom(arrNumbersRandom){
+function getPetsRandom(arrNumbersRandom) {
 	let arr = [];
 
-	for(let i of arrNumbersRandom){
+	for (let i of arrNumbersRandom) {
 		arr.push(pets[i]);
 	}
-
 	return arr;
 }
 
 // заполнить массив диапазоном случайных чисел, без повторения
-function getRandomArray(min, max){
+function getRandomArray(min, max) {
 	let arr = [];
 	let item = '';
 
-	while(arr.length < 3){
+	while (arr.length < 3) {
 		item = getRandomArbitrary(min, max);
-		if(!arr.includes(item)){
+		if (!arr.includes(item)) {
 			arr.push(item);
 		}
 
@@ -84,19 +82,19 @@ function getRandomArray(min, max){
 
 
 function getRandomArbitrary(min, max) {
-  return Math.round(Math.random() * (max - min) + min);
+	return Math.round(Math.random() * (max - min) + min);
 }
 
 // -------------------------------------------------------------------//
 // добаввление анимации
-function addAnimation(){
+function addAnimation() {
 	let cards = document.querySelectorAll('.cards');
 
 	toggleClass(cards);
-  setTimeout(toggleClass, 300, cards);
+	setTimeout(toggleClass, 300, cards);
 	console.log(cards);
 }
 
-function toggleClass(items){
-  items.forEach(i => i.classList.toggle('animate2'));
+function toggleClass(items) {
+	items.forEach(i => i.classList.toggle('animate2'));
 }
