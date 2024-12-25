@@ -156,7 +156,7 @@ h6 {
   .header {
     top: 3rem;
     left: 0;
-    padding-left: 1rem;
+    /* padding-left: 1rem; */
     width: 32rem;
   }
 
@@ -165,8 +165,8 @@ h6 {
     position: relative;
     width: 3rem;
     height: 2rem;
-    top: 2rem;
-    right: 6.3rem;
+    top: 1rem;
+    right: 1rem;
     z-index: 3;
   }
 
@@ -174,7 +174,7 @@ h6 {
   .header__burger:after {
     transition: 0.5s ease;
     content: "";
-    background-color: #F1CDB3;
+    background-color: #f1cdb3;
     position: absolute;
     width: 100%;
     height: 2px;
@@ -192,7 +192,7 @@ h6 {
   .header span {
     transition: 0.5s ease;
     position: absolute;
-    background-color: #F1CDB3;
+    background-color: #f1cdb3;
     width: 100%;
     height: 2px;
     left: 0;
@@ -242,24 +242,24 @@ h6 {
 }
 
 .list .list__link_active {
-  color: #FAFAFA;
+  color: #fafafa;
 }
 
 .list .list__link_disabled {
-  color: #CDCDCD;
+  color: #cdcdcd;
 }
 
 .list .list__link_disabled:hover {
-  color: #FAFAFA;
+  color: #fafafa;
 }
 
 .list .dis:hover {
   cursor: auto;
-  color: #CDCDCD;
+  color: #cdcdcd;
 }
 
 .list__link_active {
-  border-bottom: 3px solid #F1CDB3;
+  border-bottom: 3px solid #f1cdb3;
 }
 
 @media (max-width: 767px) {
@@ -318,10 +318,11 @@ h6 {
 .logo {
   display: flex;
   flex-direction: column;
+  margin-left: 1rem;
 }
 
 .logo__title {
-  color: #F1CDB3;
+  color: #f1cdb3;
   font-family: Georgia;
   font-size: 3.2rem;
   line-height: 110%;
@@ -346,7 +347,8 @@ main {
 .hero {
   display: flex;
   padding-top: 18rem;
-  background: url(../../assets/images/noise_transparent.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  background: url(../../assets/images/noise_transparent.png),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
 }
 
 .hero__content {
@@ -397,7 +399,7 @@ main {
 
 .content-section__subtitle {
   margin-top: 4.1rem;
-  color: #CDCDCD;
+  color: #cdcdcd;
   font-size: 1.5rem;
   font-family: Arial;
   line-height: 160%;
@@ -411,7 +413,7 @@ main {
 
 .content-section__button {
   margin-top: 42px;
-  color: #4C4C4C;
+  color: #4c4c4c;
   padding: 15px 45px;
   width: 208px;
   height: 52px;
@@ -419,11 +421,11 @@ main {
   font-family: Georgia;
   font-size: 1.7rem;
   letter-spacing: 0.059em;
-  background: #F1CDB3;
+  background: #f1cdb3;
 }
 
 .content-section__button:hover {
-  background: #FDDCC4;
+  background: #fddcc4;
 }
 
 @media (max-width: 1279px) {
@@ -576,7 +578,7 @@ main {
   font-family: Arial;
   font-size: 1.5rem;
   line-height: 160%;
-  color: #4C4C4C;
+  color: #4c4c4c;
 }
 
 @media (max-width: 1279px) {
@@ -591,7 +593,7 @@ main {
     margin: 0;
   }
 
-  .pets .cards:nth-child(1n+3) {
+  .pets .cards:nth-child(1n + 3) {
     display: none;
   }
 }
@@ -599,7 +601,7 @@ main {
 .pets {
   height: 87.7rem;
   margin-top: -2rem;
-  background: #F6F6F6;
+  background: #f6f6f6;
 }
 
 @media (max-width: 767px) {
@@ -665,7 +667,7 @@ main {
     left: 3rem;
   }
 
-  .pets .cards:nth-child(1n+2) {
+  .pets .cards:nth-child(1n + 2) {
     display: none;
   }
 }
@@ -704,15 +706,15 @@ main {
   border-radius: 50%;
   width: 5.2rem;
   height: 5.2rem;
-  border: 3px solid #F1CDB3;
+  border: 3px solid #f1cdb3;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .pets-content__button:hover {
-  border: 3px solid #FDDCC4;
-  background: #FDDCC4;
+  border: 3px solid #fddcc4;
+  background: #fddcc4;
 }
 
 .pets-content__button_rev {
@@ -720,25 +722,25 @@ main {
   border-radius: 50%;
   width: 5.2rem;
   height: 5.2rem;
-  border: 3px solid #F1CDB3;
+  border: 3px solid #f1cdb3;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .pets-content__button_rev:hover {
-  border: 3px solid #FDDCC4;
-  background: #FDDCC4;
+  border: 3px solid #fddcc4;
+  background: #fddcc4;
 }
 
 .pets-content__get-button {
   width: 26.2rem;
   height: 5.2rem;
   border-radius: 100px;
-  background: #F1CDB3;
+  background: #f1cdb3;
   line-height: 130%;
   letter-spacing: 0.06em;
-  color: #4C4C4C;
+  color: #4c4c4c;
   font-family: Georgia;
   font-style: normal;
   font-weight: normal;
@@ -746,7 +748,7 @@ main {
 }
 
 .pets-content__get-button:hover {
-  background: #FDDCC4;
+  background: #fddcc4;
 }
 
 .pets-content-cards {
@@ -763,7 +765,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #FAFAFA;
+  background: #fafafa;
   border-radius: 9px;
 }
 
@@ -782,14 +784,14 @@ main {
 .cards__button {
   margin: 0 auto;
   margin-top: 3rem;
-  color: #4C4C4C;
+  color: #4c4c4c;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #fafafa;
   width: 18.7rem;
   height: 5rem;
-  border: 2px solid #F1CDB3;
+  border: 2px solid #f1cdb3;
   border-radius: 100px;
   font-family: Georgia;
   font-style: normal;
@@ -800,8 +802,8 @@ main {
 
 .cards__button:hover {
   cursor: pointer;
-  background: #FDDCC4;
-  border: 2px solid #FDDCC4;
+  background: #fddcc4;
+  border: 2px solid #fddcc4;
 }
 
 .cards .cards-container {
@@ -857,7 +859,7 @@ main {
     height: 8.7rem;
   }
 
-  .help .list-item:nth-child(n+1) {
+  .help .list-item:nth-child(n + 1) {
     margin: 0;
   }
 
@@ -934,7 +936,7 @@ main {
   margin-left: 8.5rem;
 }
 
-.list-item:nth-child(n+6) {
+.list-item:nth-child(n + 6) {
   margin-top: 5.5rem;
 }
 
@@ -946,11 +948,11 @@ main {
     margin-top: 5.5rem;
   }
 
-  .list-item:nth-child(-n+3) {
+  .list-item:nth-child(-n + 3) {
     margin-top: 0;
   }
 
-  .list-item:nth-child(3n+4) {
+  .list-item:nth-child(3n + 4) {
     margin-left: 0;
   }
 
@@ -978,7 +980,7 @@ main {
 /*donation*/
 .donation {
   height: 46.4rem;
-  background: #F6F6F6;
+  background: #f6f6f6;
 }
 
 @media (max-width: 1279px) {
@@ -1136,7 +1138,7 @@ main {
   font-style: italic;
   font-size: 1.2rem;
   line-height: 1.8rem;
-  color: #B2B2B2;
+  color: #b2b2b2;
   margin-top: 2rem;
 }
 
@@ -1146,7 +1148,7 @@ main {
   justify-content: space-around;
   width: 34.9rem;
   height: 4.3rem;
-  background: #F1CDB3;
+  background: #f1cdb3;
   border-radius: 9px;
   margin-top: 2rem;
 }
@@ -1167,7 +1169,7 @@ main {
 
 .credit-card:hover {
   cursor: pointer;
-  background: #FDDCC4;
+  background: #fddcc4;
 }
 
 .footer {
@@ -1179,7 +1181,9 @@ main {
 @media (max-width: 1279px) {
   .footer {
     height: 63.9rem;
-    background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+    background: url(../../assets/images/noise_transparent@2x.png),
+      radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+      #211f20;
   }
 
   .footer .footer-content {
@@ -1292,7 +1296,7 @@ main {
   height: 35rem;
   display: flex;
   align-items: center;
-  color: #F1CDB3;
+  color: #f1cdb3;
 }
 
 .footer-content__contancts {
@@ -1313,7 +1317,7 @@ main {
   display: flex;
   align-items: center;
   margin-top: 4.3rem;
-  color: #F1CDB3;
+  color: #f1cdb3;
 }
 
 .contacts-mail__mail {
@@ -1336,7 +1340,7 @@ main {
   font-size: 2rem;
   line-height: 115%;
   letter-spacing: 0.12rem;
-  color: #F1CDB3;
+  color: #f1cdb3;
 }
 
 .contacts-phone__phone {
@@ -1458,7 +1462,7 @@ main {
 .modal__close {
   width: 52px;
   height: 52px;
-  border: 2px solid #F1CDB3;
+  border: 2px solid #f1cdb3;
   box-sizing: border-box;
   border-radius: 100px;
   display: flex;
@@ -1471,7 +1475,7 @@ main {
 
 .modal__close:hover {
   cursor: pointer;
-  background: #F1CDB3;
+  background: #f1cdb3;
 }
 
 body.modal-open {
@@ -1533,7 +1537,7 @@ body.modal-open {
 .content__description .propertys li::before {
   content: "•";
   padding-right: 8px;
-  color: #F1CDB3;
+  color: #f1cdb3;
 }
 
 @media (max-width: 1279px) {
@@ -1624,7 +1628,6 @@ body.modal-open {
     transform-origin: left top;
     transform: rotate(0deg);
   }
-
 
   75% {
     transform-origin: left top;
